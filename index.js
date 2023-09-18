@@ -13,9 +13,18 @@ var words = [
 ]
 
 
-var headline = document.querySelector("h2")
-console.log(headline)
 
+const randomWord = Math.floor(Math.random() * arr.length);
+console.log(randomWord)
+
+const word = arr[randomWord];
+
+return word;
+
+
+console.log(randomWord)
+
+var headline = document.querySelector("h2")
 
 /* PSEUDOCODE
 - Select a random word from words array
@@ -29,3 +38,4 @@ console.log(headline)
 - After a win the game resets by choosing the next randomly-chosen word and reset all of the other elements
 - After a win the guessed word should appear in the #previous-word
 - After a loss (when remaining guesses are 0), the game resets and chooses the next random word and adds 1 to "losses"
+  */
