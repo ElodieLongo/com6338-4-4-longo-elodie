@@ -12,10 +12,6 @@ let words = [
   'mango'
 ];
 
-window.onload = function(resetGame){
-
-}
-
 
 function printRandomWord(){
   
@@ -32,12 +28,70 @@ printRandomWord()
 
 
 
+/* Notes from course
+To change DOM elements:
 
+Text example:
+let element =  document.querySelector("#word-to-guess");
+element.textContent = "text I want to see"
 
+Image example:
+let image = document.querySelector("image")
+img.src = "http://picsum.photo/600/300"
 
+Inner HTML To add a string of HTML here replace a p with a list:
+let secondP = document.querySelector("p:nth-of-type(2)")
+secondP.innerHTML = "<ol>"
+<li>red</li>
+<li>blue</li>
+<li>yellow</li>
+</ol>
+
+To create and append elements:
+let or = document.createElement("ol")
+document.body.appendChild(ol)
+
+To remove elements from DOM
+var lisItems = document.querySelectorAll("ol > li")
+for(let listitem of lisitems) {
+  if (listItem.textContent === "broccoli") {
+    listItem.remove()
+  }
+
+  Click Events:
+The old way is with onClick
+The new way:
+  btn.addEventListener("click".handleClick) 
+  
+  function handleClick(){
+    }
+  
+ btn.removeEventListener("click".handleClick) 
+
+To attach the same behaviour to multipl elements (here to all buttons)
+let btns = document.querySelectorAll(".buttons > button")
+let span = document.getElementById("clicked")
+for (let i = 0; i < btns.lenght; i++) {
+  btns[i].addEventListener("click".function() {
+    span.textContent = this.textContent
+  })
+}
+
+How to record keyboard events:
+grab h2 tag:
+var h2 = document.querySelector("h2")
+var pre = document.querySelector("pre")
+
+document.onkeyup =function(e) {
+h2.textContent = e.key
+pre.textContent = JSON.stringify(e. null.2){
+  key:e.
+})
+}
 
 /* PSEUDOCODE
 - Select a random word from words array
+
 - pace it in the  #word-to-guess element with letters replaced by underscore
 - it should count 10 remaining guesses in the #remaining-guesses element. 
 -User pressed letter key (record that?)
