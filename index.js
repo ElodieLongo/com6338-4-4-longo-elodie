@@ -10,19 +10,26 @@ let words = [
   'meatloaf',
   'ukulele',
   'mango'
-]
+];
 
 window.onload = function(resetGame){
 
 }
 
 
-
 function printRandomWord(){
   
-  const randomWord = Math.floor(Math.random() * words.length);
-let printRandomWord =  document.querySelector("word-to-guess") = randomWord.replaceAll("[a-zA-Z]","_");
-};
+  const randomNumber = Math.floor(Math.random() * words.length);
+  const randomWord = words[randomNumber]
+  
+let element =  document.querySelector("#word-to-guess");
+  console.log(randomWord)
+  // randomWord.replaceAll("[a-zA-Z]","_");
+  // contare lunghezza stringa + replace lunghezza per underscore
+  
+}
+printRandomWord()
+
 
 
 
