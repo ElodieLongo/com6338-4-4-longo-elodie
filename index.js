@@ -22,8 +22,20 @@ let element =  document.querySelector("#word-to-guess");
   console.log(randomWord)
   // randomWord.replaceAll("[a-zA-Z]","_");
   // contare lunghezza stringa + replace lunghezza per underscore
+
+
+
+let previousWordEl = document.getElementById("#previous-word");
+let incorrectLettersEl = document.getElementById("#incorrect-letters");
+let remainingGuessesEl = document.getElementById("#remaining-guesses");  
   
-}
+let winsEl = document.getElementById("#wins");  
+let lossesEl = document.getElementById("#losses");  
+
+  let wins = 0
+  let losses = 0
+let key =  document.onKeyUp = function(e);
+let key = e.key.toLowerCase()
 printRandomWord()
 
 
