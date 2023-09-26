@@ -1,41 +1,42 @@
-let words = [
-  'bananas',
-  'grapes',
-  'carousel',
-  'milkshake',
-  'javascript',
-  'limousine',
-  'chocolate',
-  'programming',
-  'meatloaf',
-  'ukulele',
-  'mango'
-];
+document.addEventListener("DOMContentLoaded", function () {
 
-let previousWordEl = document.getElementById("#previous-word");
-let incorrectLettersEl = document.getElementById("#incorrect-letters");
-let remainingGuessesEl = document.getElementById("#remaining-guesses");  
-  
-let winsEl = document.getElementById("#wins");  
-let lossesEl = document.getElementById("#losses");  
+  let words = [
+    'bananas',
+    'grapes',
+    'carousel',
+    'milkshake',
+    'javascript',
+    'limousine',
+    'chocolate',
+    'programming',
+    'meatloaf',
+    'ukulele',
+    'mango'
+  ];
 
-let wins = 0
-let losses = 0
-function printRandomWord(){
-  
-  const randomNumber = Math.floor(Math.random() * words.length);
-  const randomWord = words[randomNumber]
-  
-let element =  document.querySelector("#word-to-guess");
-  console.log(element)
-}
+  // Get references to HTML elements
+  let previousWordEl = document.getElementById("previous-word");
+  let incorrectLettersEl = document.getElementById("incorrect-letters");
+  let remainingGuessesEl = document.getElementById("remaining-guesses");
+  let winsEl = document.getElementById("wins");
+  let lossesEl = document.getElementById("losses");
+  let wins = 0;
+  let losses = 0;
 
-  printRandomWord()
+  function printRandomWord() {
+    const randomNumber = Math.floor(Math.random() * words.length);
+    const randomWord = words[randomNumber];
+    const wordToGuess = "_".repeat(randomWord.length);
 
-  
-  // contare lunghezza stringa + replace lunghezza per underscore
+    let element = document.getElementById("word-to-guess");
+    element.textContent = wordToGuess;
+   
+    remainingGuesses = 10; 
+    remainingGuessesEl.textContent = remainingGuesses;
+  }
 
-
+  printRandomWord();
+});
 
 
   
@@ -43,9 +44,7 @@ let element =  document.querySelector("#word-to-guess");
 //let key = e.key.toLowerCase()
 
 
-document.onkeyup = function(e) {
 // access user keypress
-}
 
   
 // to reset at the end of game
@@ -54,8 +53,8 @@ document.onkeyup = function(e) {
   
 /* PSEUDOCODE
 - Select a random word from words array
-
 - pace it in the  #word-to-guess element with letters replaced by underscore
+
 - it should count 10 remaining guesses in the #remaining-guesses element. 
 -User pressed letter key (record that?)
 - Check if letter is one of the word to guess
@@ -140,4 +139,4 @@ pre.textContent = JSON.stringify(e. null.2){
   key:e.
 })
 }
-
+*/
